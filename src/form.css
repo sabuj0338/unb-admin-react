@@ -1,0 +1,44 @@
+@charset "UTF-8";
+details {
+  user-select: none;
+}
+details summary svg {
+  transform: rotate(90deg);
+}
+
+details[open] summary svg {
+  transform: rotate(-90deg);
+}
+
+details[open] summary ~ * {
+  animation: ease-opacity-t-b 0.5s ease;
+}
+
+summary {
+  cursor: pointer;
+}
+
+svg {
+  transition: all 0.3s;
+}
+
+/* TO JE TO - TO JE TAJ */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+:focus {
+  outline: none;
+}
+
+/* <details className="question py-4 border-b border-grey-lighter">
+
+<summary className="flex items-center font-bold">My childhoood
+  <button className="ml-auto">
+  <svg className="fill-current opacity-75 w-4 h-4 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+</button>
+</summary>
+
+<div className="mt-4 leading-normal text-md ">I lived near lake Eerie and I really miss sunsets over the water. Fuga perspiciatis quidem sunt animi.  We can all grab at the chance to be handsome farmers. YEAH you can have 21 sons that'll be blood when they marry my daughters. And the pain that we left at the station will stay in a jar behind us. We can pickle the pain into blue ribbon winners at county contests....
+Gosh. I loved her to bits</div>
+</details> */

@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Image | UNB</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" crossorigin="anonymous">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./cropper.min.css">
+    <link rel="stylesheet" href="./tailwind.min.css">
+    <style>
+        .cropper-container {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        .cropper-modal {
+            opacity: 0.8 !important;
+        }
+    </style>
+
+    <!-- <script>
+        const queryString = window.location.search;
+        // alert(queryString);
+        const urlParams = new URLSearchParams(queryString);
+        const imageUrl = urlParams.get('image');
+        // console.log("🚀 ~ file: index.html:26 ~ imageUrl", imageUrl)
+        // document.getElementById('imageId').value = imageUrl;
+    </script> -->
+</head>
+
+<body>
+
+    <!-- Content -->
+    <div class="">
+        <div class="img-container h-screen w-full">
+            <img src="" id="canvasPreviewImage" alt="Picture">
+            <!-- <img src="<?php echo $_GET['image']; ?>" alt="Picture"> -->
+            <input type="hidden" id="imageId" value="">
+        </div>
+    </div>
+
+    <!-- bottom navigation menu -->
+    <div class="fixed z-90 bottom-10 right-10">
+        <div class="bg-gray-800 rounded-full px-5 py-3 flex items-center">
+            <div class="text-gray-500">
+                <span>W: <strong id="width" class="text-gray-200">90</strong>px</span>
+                <span class="text-gray-500">|</span>
+                <span>H: <strong id="height" class="text-gray-200">90</strong>px</span>
+            </div>
+            <div class="w-8"></div>
+            <!-- Icon -->
+            <button id="crop" class="w-10 h-10 flex items-center justify-center bg-gray-700 outline-none border-gray-700 border text-indigo-500 rounded-full group hover:bg-indigo-500 hover:text-white hover:border-transparent focus:bg-indigo-500 focus:text-white focus:border-transparent focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 n active:scale-95 disabled:bg-gray-400/80 disabled:shadow-none disabled:cursor-not-allowed">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/jquery@3/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="./cropper.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
